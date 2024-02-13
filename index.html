@@ -8,40 +8,42 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font -->
+    <!-- arbic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        .lateef-extralight {
-            font-family: "Lateef", serif;
-            font-weight: 200;
+        .mirza-regular {
+            font-family: "Mirza", serif;
+            font-weight: 400;
             font-style: normal;
         }
     </style>
 </head>
-<body>
+<body class="">
     <main>
-        <section class="flex items-center flex-col bg-slate-50 relative h-screen">
-            <div class="mb-10 bg-slate-100 w-full flex justify-center bg-center bg-cover bg-no-repeat">
-                <div class=" w-[900px] m-5 p-5 border-[2px] rounded-3xl">
-                    <h5 id="dua-title" class="font-bold">Lorem ipsum dolor sit amet.</h5>
-                    <p class="lateef-extralight text-[28px] text-black font-bold" id="dua-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit iure neque illum accusamus? Consequuntur a neque recusandae, inventore vel iusto officiis numquam sit ipsum nesciunt enim quasi nulla saepe quo doloribus laborum non, earum optio maxime quisquam aliquam pariatur! Delectus corrupti vel molestias, accusantium placeat culpa? Et, provident rem! Dignissimos.</p>
+        <section class="flex items-center flex-col relative md:h-screen">
+            <div class="mb-10 w-full flex justify-center bg-center bg-cover bg-no-repeat">
+                <div class=" w-[900px] m-5 p-5 border-[2px] rounded-3xl bg-white">
+                    <h5 id="dua-title" class="font-bold text-[20px] text-secondary"></h5>
+                    <p class="mirza-regular text-[28px] text-black font-bold text-right" id="dua-text"></p>
                 </div>
             </div>
             <div class="bg-white grid grid-cols-2 lg:grid-cols-4 rounded-lg shadow text-center">
                 <div class="stat flex flex-col items-center text-primary">
-                    <div class="stat-title mb-2">Total Progress</div>
+                    <div class="stat-title mb-2">Total Progress %</div>
                     <div id="total-progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="total-progress-text">0%</span></div>
                 </div>
 
 
                 <div class="stat flex flex-col items-center text-secondary">
-                    <div class="stat-title mb-2">Progress</div>
+                    <div class="stat-title mb-2">Progress %</div>
                     <div id="progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="progress-text">0%</span></div>
                 </div>
 
