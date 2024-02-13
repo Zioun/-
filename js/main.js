@@ -1,5 +1,9 @@
 let countBtn = document.getElementById("count-btn");
-let countDBtn = document.getElementById("countD-btn");
+
+countBtn.addEventListener("click",function(){
+    let skeleton = document.getElementById("skeleton");
+    skeleton.setAttribute("class", "hidden");
+})
 
 let duaTitle = document.getElementById("dua-title");
 let duaText = document.getElementById("dua-text")
@@ -34,6 +38,8 @@ let countValue21 = 0;
 let countValue22 = 0;
 let countValue23 = 0;
 let countValue24 = 0;
+let countValue25 = 0;
+let countValue26 = 0;
 
 let countTotalValue = 0;
 
@@ -41,7 +47,7 @@ countBtn.addEventListener('click',function(){
     if(countValue < 1){
         countValue += 1;
         count.innerText = countValue;
-        duaTitle.innerText = "১  নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
+        duaTitle.innerText = "১  নং জিকির : আয়াতুল কুরসী ( সকাল - সন্ধ্যা ১ বার )";
         duaText.innerText = `        
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
@@ -49,31 +55,42 @@ countBtn.addEventListener('click',function(){
     }else if(countValue2 < 3){
         countValue2 += 1;
         count.innerText = countValue2;
-        duaTitle.innerText = "2 নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
+        duaTitle.innerText = "২ নং  জিকির : সুরাহ ইখলাস ( সকাল সন্ধ্যা ৩ বার )";
         duaText.innerText = `        
-            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        قُلْ هُوَ ٱللَّهُ أَحَدٌ ١ 
+        ٱللَّهُ ٱلصَّمَدُ ٢ 
+        لَمْ يَلِدْ وَلَمْ يُولَدْ ٣ 
+        وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ ٤       
         `;
 
-    }else if(countValue3 < 7){
+    }else if(countValue3 < 3){
         countValue3 += 1;
         count.innerText = countValue3;
-        duaTitle.innerText = "3নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
+        duaTitle.innerText = "৩ নং  জিকির : সুরাহ ফালাক্ব  ( সকাল সন্ধ্যা ৩ বার )";
         duaText.innerText = `        
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+            قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ١ 
+            مِن شَرِّ مَا خَلَقَ ٢ 
+            وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ٣ 
+            وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ ٤ 
+            وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ٥
         `;
 
-    }else if(countValue4 < 1){
+    }else if(countValue4 < 3){
         countValue4 += 1;
         count.innerText = countValue4;
-        duaTitle.innerText = "4নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
+        duaTitle.innerText = "৪ নং জিকির : সুরাহ নাস ( সকাল সন্ধ্যা ৩ বার )";
         duaText.innerText = `        
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+            قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ١ 
+            مَلِكِ ٱلنَّاسِ ٢ 
+            إِلَـٰهِ ٱلنَّاسِ ٣ 
+            مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ٤ 
+            ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ٥ 
+            مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ٦
         `;
-
-    }else if(countValue5 < 3){
+    }else if(countValue5 < 7){
         countValue5 += 1;
         count.innerText = countValue5;
         duaTitle.innerText = "5নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -82,7 +99,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue6 < 10){
+    }else if(countValue6 < 1){
         countValue6 += 1;
         count.innerText = countValue6;
         duaTitle.innerText = "6নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -91,7 +108,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue7 < 1){
+    }else if(countValue7 < 3){
         countValue7 += 1;
         count.innerText = countValue7;
         duaTitle.innerText = "7নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -100,7 +117,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue8 < 1){
+    }else if(countValue8 < 10){
         countValue8 += 1;
         count.innerText = countValue8;
         duaTitle.innerText = "8নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -127,7 +144,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue11 < 3){
+    }else if(countValue11 < 1){
         countValue11 += 1;
         count.innerText = countValue11;
         duaTitle.innerText = "11নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -145,7 +162,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue13 < 100){
+    }else if(countValue13 < 3){
         countValue13 += 1;
         count.innerText = countValue13;
         duaTitle.innerText = "13নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -154,7 +171,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue14 < 4){
+    }else if(countValue14 < 1){
         countValue14 += 1;
         count.innerText = countValue14;
         duaTitle.innerText = "14নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -163,7 +180,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue15 < 1){
+    }else if(countValue15 < 100){
         countValue15 += 1;
         count.innerText = countValue15;
         duaTitle.innerText = "15নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -172,7 +189,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue16 < 1){
+    }else if(countValue16 < 4){
         countValue16 += 1;
         count.innerText = countValue16;
         duaTitle.innerText = "16নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -181,7 +198,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue17 < 3){
+    }else if(countValue17 < 1){
         countValue17 += 1;
         count.innerText = countValue17;
         duaTitle.innerText = "17নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -208,7 +225,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue20 < 3){
+    }else if(countValue20 < 1){
         countValue20 += 1;
         count.innerText = countValue20;
         duaTitle.innerText = "12নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -217,7 +234,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue21 < 7){
+    }else if(countValue21 < 3){
         countValue21 += 1;
         count.innerText = countValue21;
         duaTitle.innerText = "12নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -226,7 +243,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue22 < 100){
+    }else if(countValue22 < 3){
         countValue22 += 1;
         count.innerText = countValue22;
         duaTitle.innerText = "12নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -235,7 +252,7 @@ countBtn.addEventListener('click',function(){
             اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
         `;
 
-    }else if(countValue23 < 100){
+    }else if(countValue23 < 7){
         countValue23 += 1;
         count.innerText = countValue23;
         duaTitle.innerText = "13নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
@@ -247,6 +264,24 @@ countBtn.addEventListener('click',function(){
     }else if(countValue24 < 100){
         countValue24 += 1;
         count.innerText = countValue24;
+        duaTitle.innerText = "14নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
+        duaText.innerText = `        
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+        `;
+
+    }else if(countValue25 < 100){
+        countValue25 += 1;
+        count.innerText = countValue25;
+        duaTitle.innerText = "14নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
+        duaText.innerText = `        
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+        `;
+
+    }else if(countValue26 < 100){
+        countValue26 += 1;
+        count.innerText = countValue26;
         duaTitle.innerText = "14নং জিকির : আয়াতুল কুরসী (সকাল - সন্ধ্যা ১ বার )";
         duaText.innerText = `        
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
@@ -349,6 +384,12 @@ let progressTextValue23 = 0;
 let progressValue24 = 0;
 let progressTextValue24 = 0;
 
+let progressValue25 = 0;
+let progressTextValue25 = 0;
+
+let progressValue26 = 0;
+let progressTextValue26 = 0;
+
 countBtn.addEventListener('click',function(){
     if(progressValue < 99){
         progressTextValue += 100;
@@ -365,44 +406,44 @@ countBtn.addEventListener('click',function(){
         progress.setAttribute("style",`--value:${progressValue2};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue3 < 99){
-        progressTextValue3 += 14.285;
+        progressTextValue3 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue3);
-        progressValue3 += 14.285;
+        progressValue3 += 33.333;
         progressValue3.innerText = Math.ceil(progressTextValue3);
         progress.setAttribute("style",`--value:${progressValue3};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue4 < 99){
-        progressTextValue4 += 100;
+        progressTextValue4 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue4);
-        progressValue4 += 100;
+        progressValue4 += 33.333;
         progressValue4.innerText = Math.ceil(progressTextValue4);
         progress.setAttribute("style",`--value:${progressValue4};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue5 < 99){
-        progressTextValue5 += 33.33;
+        progressTextValue5 += 14.285;
         progressText.innerText = Math.ceil(progressTextValue5);
-        progressValue5 += 33.33;
+        progressValue5 += 14.285;
         progressValue5.innerText = Math.ceil(progressTextValue5);
         progress.setAttribute("style",`--value:${progressValue5};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue6 < 99){
-        progressTextValue6 += 10;
+        progressTextValue6 += 100;
         progressText.innerText = Math.ceil(progressTextValue6);
-        progressValue6 += 10;
+        progressValue6 += 100;
         progressValue6.innerText = Math.ceil(progressTextValue6);
         progress.setAttribute("style",`--value:${progressValue6};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue7 < 99){
-        progressTextValue7 += 100;
+        progressTextValue7 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue7);
-        progressValue7 += 100;
+        progressValue7 += 33.333;
         progressValue7.innerText = Math.ceil(progressTextValue7);
         progress.setAttribute("style",`--value:${progressValue7};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue8 < 99){
-        progressTextValue8 += 100;
+        progressTextValue8 += 10;
         progressText.innerText = Math.ceil(progressTextValue8);
-        progressValue8 += 100;
+        progressValue8 += 10;
         progressValue8.innerText = Math.ceil(progressTextValue8);
         progress.setAttribute("style",`--value:${progressValue8};--size:4rem; --thickness: 6px;`);
 
@@ -421,9 +462,9 @@ countBtn.addEventListener('click',function(){
         progress.setAttribute("style",`--value:${progressValue10};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue11 < 99){
-        progressTextValue11 += 33.33;
+        progressTextValue11 += 100;
         progressText.innerText = Math.ceil(progressTextValue11);
-        progressValue11 += 33.33;
+        progressValue11 += 100;
         progressValue11.innerText = Math.ceil(progressTextValue11);
         progress.setAttribute("style",`--value:${progressValue11};--size:4rem; --thickness: 6px;`);
 
@@ -434,38 +475,38 @@ countBtn.addEventListener('click',function(){
         progressValue12.innerText = Math.ceil(progressTextValue12);
         progress.setAttribute("style",`--value:${progressValue12};--size:4rem; --thickness: 6px;`);
 
-    }else if(progressValue13 < 100){
-        progressTextValue13 += 1;
+    }else if(progressValue13 < 99){
+        progressTextValue13 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue13);
-        progressValue13 += 1;
+        progressValue13 += 33.333;
         progressValue13.innerText = Math.ceil(progressTextValue13);
         progress.setAttribute("style",`--value:${progressValue13};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue14 < 99){
-        progressTextValue14 += 24;
+        progressTextValue14 += 100;
         progressText.innerText = Math.ceil(progressTextValue14);
-        progressValue14 += 24;
+        progressValue14 += 100;
         progressValue14.innerText = Math.ceil(progressTextValue14);
         progress.setAttribute("style",`--value:${progressValue14};--size:4rem; --thickness: 6px;`);
 
-    }else if(progressValue15 < 99){
-        progressTextValue15 += 100;
+    }else if(progressValue15 < 100){
+        progressTextValue15 += 1;
         progressText.innerText = Math.ceil(progressTextValue15);
-        progressValue15 += 100;
+        progressValue15 += 1;
         progressValue15.innerText = Math.ceil(progressTextValue15);
         progress.setAttribute("style",`--value:${progressValue15};--size:4rem; --thickness: 6px;`);
 
-    }else if(progressValue16 < 99){
-        progressTextValue16 += 100;
+    }else if(progressValue16 < 100){
+        progressTextValue16 += 25;
         progressText.innerText = Math.ceil(progressTextValue16);
-        progressValue16 += 100;
+        progressValue16 += 25;
         progressValue16.innerText = Math.ceil(progressTextValue16);
         progress.setAttribute("style",`--value:${progressValue16};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue17 < 99){
-        progressTextValue17 += 33.33;
+        progressTextValue17 += 100;
         progressText.innerText = Math.ceil(progressTextValue17);
-        progressValue17 += 33.33;
+        progressValue17 += 100;
         progressValue17.innerText = Math.ceil(progressTextValue17);
         progress.setAttribute("style",`--value:${progressValue17};--size:4rem; --thickness: 6px;`);
 
@@ -477,36 +518,36 @@ countBtn.addEventListener('click',function(){
         progress.setAttribute("style",`--value:${progressValue18};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue19 < 99){
-        progressTextValue19 += 33.33;
+        progressTextValue19 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue19);
-        progressValue19 += 33.33;
+        progressValue19 += 33.333;
         progressValue19.innerText = Math.ceil(progressTextValue19);
         progress.setAttribute("style",`--value:${progressValue19};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue20 < 99){
-        progressTextValue20 += 33.33;
+        progressTextValue20 += 100;
         progressText.innerText = Math.ceil(progressTextValue20);
-        progressValue20 += 33.33;
+        progressValue20 += 100;
         progressValue20.innerText = Math.ceil(progressTextValue20);
         progress.setAttribute("style",`--value:${progressValue20};--size:4rem; --thickness: 6px;`);
 
     }else if(progressValue21 < 99){
-        progressTextValue21 += 14.285;
+        progressTextValue21 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue21);
-        progressValue21 += 33.33;
+        progressValue21 += 33.333;
         progressValue21.innerText = Math.ceil(progressTextValue21);
         progress.setAttribute("style",`--value:${progressValue21};--size:4rem; --thickness: 6px;`);
 
-    }else if(progressValue22 < 100){
-        progressTextValue22 += 1;
+    }else if(progressValue22 < 99){
+        progressTextValue22 += 33.333;
         progressText.innerText = Math.ceil(progressTextValue22);
-        progressValue22 += 1;
+        progressValue22 += 33.333;
         progressValue22.innerText = Math.ceil(progressTextValue22);
         progress.setAttribute("style",`--value:${progressValue22};--size:4rem; --thickness: 6px;`);
-    }else if(progressValue23 < 100){
-        progressTextValue23 += 1;
+    }else if(progressValue23 < 99){
+        progressTextValue23 += 14.285;
         progressText.innerText = Math.ceil(progressTextValue23);
-        progressValue23 += 1;
+        progressValue23 += 14.285;
         progressValue23.innerText = Math.ceil(progressTextValue23);
         progress.setAttribute("style",`--value:${progressValue23};--size:4rem; --thickness: 6px;`);
     }else if(progressValue24 < 100){
@@ -515,6 +556,18 @@ countBtn.addEventListener('click',function(){
         progressValue24 += 1;
         progressValue24.innerText = Math.ceil(progressTextValue24);
         progress.setAttribute("style",`--value:${progressValue24};--size:4rem; --thickness: 6px;`);
+    }else if(progressValue25 < 100){
+        progressTextValue25 += 1;
+        progressText.innerText = Math.ceil(progressTextValue25);
+        progressValue25 += 1;
+        progressValue25.innerText = Math.ceil(progressTextValue25);
+        progress.setAttribute("style",`--value:${progressValue25};--size:4rem; --thickness: 6px;`);
+    }else if(progressValue26 < 100){
+        progressTextValue26 += 1;
+        progressText.innerText = Math.ceil(progressTextValue26);
+        progressValue26 += 1;
+        progressValue26.innerText = Math.ceil(progressTextValue26);
+        progress.setAttribute("style",`--value:${progressValue26};--size:4rem; --thickness: 6px;`);
     }
     
 })
@@ -535,9 +588,9 @@ let totalProgressTextValue3 = 0;
 
 countBtn.addEventListener('click',function(){
     if(totalProgressValue < 500){
-        totalProgressTextValue += 0.21929824561;
+        totalProgressTextValue += 0.21645021645;
         totalProgressText.innerText = Math.ceil(totalProgressTextValue);
-        totalProgressValue += 0.21929824561;
+        totalProgressValue += 0.21645021645;
         totalProgressValue.innerText = Math.ceil(totalProgressTextValue);
         totalProgress.setAttribute("style",`--value:${totalProgressValue};--size:4rem; --thickness: 6px;`);
         console.log(progress);
@@ -546,7 +599,7 @@ countBtn.addEventListener('click',function(){
 
 
 countBtn.addEventListener('click',function(){
-    if(countTotalValue >= 456){
+    if(countTotalValue >= 462){
         countBtn.setAttribute('disabled', 'disabled');
         let masaallahImg = document.getElementById("masaallah-img");
         masaallahImg.setAttribute("class","w-96 left-0 top-40 rotate-[40deg] absolute -ml-40");
