@@ -10,27 +10,30 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .reem-kufi{
-            font-family: "Reem Kufi Fun", sans-serif;
-            font-optical-sizing: auto;
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .lateef-extralight {
+            font-family: "Lateef", serif;
+            font-weight: 200;
             font-style: normal;
-            font-size: 25px;
         }
     </style>
 </head>
 <body>
     <main>
-        <section class="flex justify-center items-center flex-col h-screen bg-slate-50 relative">
-            <div class="mb-10 bg-slate-100 w-full flex justify-center">
-                <ul class="steps steps-vertical md:steps-horizontal z-10">
-                    <li id="step-one" class="step"><span class="reem-kufi">سبحان الله</span></li>
-                    <li id="step-two" class="step"><span class="reem-kufi">الحمد لله</span></li>
-                    <li id="step-three" class="step"><span class="reem-kufi">الله أكبر</span></li>
-                </ul>
+        <section class="flex items-center flex-col bg-slate-50 relative h-screen">
+            <div class="mb-10 bg-slate-100 w-full flex justify-center bg-center bg-cover bg-no-repeat">
+                <div class=" w-[900px] m-5 p-5 border-[2px] rounded-3xl">
+                    <h5 id="dua-title" class="font-bold">Lorem ipsum dolor sit amet.</h5>
+                    <p class="lateef-extralight text-[28px] text-black font-bold" id="dua-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit iure neque illum accusamus? Consequuntur a neque recusandae, inventore vel iusto officiis numquam sit ipsum nesciunt enim quasi nulla saepe quo doloribus laborum non, earum optio maxime quisquam aliquam pariatur! Delectus corrupti vel molestias, accusantium placeat culpa? Et, provident rem! Dignissimos.</p>
+                </div>
             </div>
-            <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+            <div class="bg-white grid grid-cols-2 lg:grid-cols-4 rounded-lg shadow text-center">
                 <div class="stat flex flex-col items-center text-primary">
                     <div class="stat-title mb-2">Total Progress</div>
                     <div id="total-progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="total-progress-text">0%</span></div>
