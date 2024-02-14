@@ -562,15 +562,14 @@ let totalProgressTextValue3 = 0;
 
 countBtn.addEventListener('click',function(){
     if(totalProgressValue < 500){
-        totalProgressTextValue += 0.21645021645;
+        totalProgressTextValue += 0.216;
         totalProgressText.innerText = Math.ceil(totalProgressTextValue);
-        totalProgressValue += 0.21645021645;
+        totalProgressValue += 0.216;
         totalProgressValue.innerText = Math.ceil(totalProgressTextValue);
         totalProgress.setAttribute("style",`--value:${totalProgressValue};--size:4rem; --thickness: 6px;`);
         console.log(progress);
     }  
 })
-
 
 countBtn.addEventListener('click',function(){
     if(countTotalValue >= 462){
@@ -579,3 +578,4 @@ countBtn.addEventListener('click',function(){
         masaallahImg.setAttribute("class","w-96 left-0 top-40 rotate-[40deg] absolute -ml-40");
     }
 })
+
