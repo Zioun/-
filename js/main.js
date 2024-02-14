@@ -269,16 +269,7 @@ countBtn.addEventListener('click',function(){
     countTotalValue += 1;
     countTotal.innerText = countTotalValue;
 
-    // if(countTotalValue >= 33){
-    //     stepOne.className = "step step-secondary";
-    // }
-    // if(countTotalValue >= 66){
-    //     stepTwo.className = "step step-secondary";
-    // }
-    // if(countTotalValue >= 99){
-    //     stepThree.className = "step step-secondary";
-    // }
-    
+ 
 })
 
 // Progress 
@@ -545,7 +536,6 @@ countBtn.addEventListener('click',function(){
     }
     
 })
-
 
 // Total Progress
 
