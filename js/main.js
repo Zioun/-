@@ -552,10 +552,10 @@ let totalProgressTextValue3 = 0;
 
 countBtn.addEventListener('click',function(){
     if(totalProgressValue < 500){
-        totalProgressTextValue += 0.216;
-        totalProgressText.innerText = Math.ceil(totalProgressTextValue);
-        totalProgressValue += 0.216;
-        totalProgressValue.innerText = Math.ceil(totalProgressTextValue);
+        totalProgressTextValue += 0.21655021645;
+        totalProgressText.innerText = Math.floor(totalProgressTextValue);
+        totalProgressValue += 0.21655021645;
+        totalProgressValue.innerText = Math.floor(totalProgressTextValue);
         totalProgress.setAttribute("style",`--value:${totalProgressValue};--size:4rem; --thickness: 6px;`);
         console.log(progress);
     }  
