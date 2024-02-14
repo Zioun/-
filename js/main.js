@@ -1,12 +1,12 @@
 let countBtn = document.getElementById("count-btn");
 
-countBtn.addEventListener("click",function(){
+countBtn.addEventListener("mousemove",function(){
     let skeleton = document.getElementById("skeleton");
     skeleton.setAttribute("class", "hidden");
 })
 
 let duaTitle = document.getElementById("dua-title");
-let duaText = document.getElementById("dua-text")
+let duaText = document.getElementById("dua-text");
 
 let stepOne = document.getElementById("step-one");
 let stepTwo = document.getElementById("step-two");
@@ -560,12 +560,17 @@ countBtn.addEventListener('click',function(){
         console.log(progress);
     }  
 })
-
 countBtn.addEventListener('click',function(){
     if(countTotalValue >= 462){
         countBtn.setAttribute('disabled', 'disabled');
-        let masaallahImg = document.getElementById("masaallah-img");
-        masaallahImg.setAttribute("class","w-96 left-0 top-40 rotate-[40deg] absolute -ml-40");
+        let duaArea = document.getElementById("dua-area");
+        duaArea.setAttribute('class', 'hidden');
+        let masaallahArea = document.getElementById("masaallah-area");
+        masaallahArea.setAttribute('class', 'block');
+    }
+    if(countTotalValue > 0){
+        let startDua = document.getElementById("start-dua");
+        startDua.setAttribute('class', 'hidden');
     }
 })
 

@@ -7,6 +7,7 @@
     <!-- daisyUi & tailwindCSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="img/wellcome-imam.png" type="image/x-icon">
     <!-- google font -->
     <!-- arbic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,13 +27,12 @@
         }
     </style>
 </head>
-<body class="">
-    
+<body class="bg-slate-50 min-h-screen">
     <main>
         <section class="flex items-center flex-col relative">
-            <div class="bg-slate-50 grid grid-cols-2 lg:grid-cols-4 rounded-lg shadow text-center mt-10">
+            <div class="bg-white grid grid-cols-2 lg:grid-cols-4 rounded-lg shadow text-center mt-10 skeleton">
                 
-                <div class="stat flex flex-col items-center text-primary">
+                <div class="stat flex flex-col items-center text-primary ">
                     <div class="stat-title mb-2">Total Progress %</div>
                     <div id="total-progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="total-progress-text">0%</span></div>
                 </div>
@@ -41,7 +41,6 @@
                     <div class="stat-title mb-2">Progress %</div>
                     <div id="progress" class="radial-progress" style="--value:0; --size:4rem; --thickness: 6px;" role="progressbar"><span id="progress-text">0%</span></div>
                 </div>
-
 
                 <div class="stat text-primary">
                   <div class="stat-title">Total Count</div>
@@ -55,31 +54,44 @@
                 
             </div>
             <div class="mb-5">
-            <button id="count-btn" class="btn btn-circle mt-5 text-secondary border-y-rose-700">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <button id="count-btn" class="btn btn-circle btn-lg mt-5 text-secondary border-white hover:border-slate-50 border-solid border-4 rounded-[50%] shadow-md  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </button>
             </div>
             <div class="mb-10 w-full flex justify-center bg-center bg-cover bg-no-repeat">
                 
-                <div class=" w-[900px] m-5 p-5 shadow rounded-lg bg-slate-50">
-                    <div id="skeleton">
-                        <div class="flex flex-col gap-4 w-full ">
-                            <div class="skeleton h-8 w-[50%]"></div>
-                            <div class="flex flex-col items-end gap-3">
-                                <div class="skeleton h-8 w-[30%]"></div>
-                                <div class="skeleton h-8 w-full"></div>
-                                <div class="skeleton h-8 w-full"></div>
-                                <div class="skeleton h-8 w-[90%]"></div>
+                <div class=" w-[900px] m-5 p-5 shadow rounded-lg bg-white">
+                    <div id="start-dua">
+                        <div class="md:flex justify-center items-center">
+                            <div class="">
+                                <img class="w-40" src="img/wellcome-imam.png" alt="wellcome-imam">
+                            </div>
+                            <div class="md:px-10 flex-1">
+                                <h1 class="font-bold text-lg text-primary mb-3">দুআ-দুরুদ ও জিকিরের শুরুতে  কি বিসমিল্লাহ বলতে হবে?</h1>
+                                <p class="leading-[25px]">যে কোনো সাধারণ দুআ , জিকির ও তাসবীহ পাঠের শুরুতে আউযুবিল্লাহ ও বিসমিল্লাহ  পড়তে হবে না।  তবে  দুআ ও জিকির হিসেবে কোরানের কোনো অংশ পাঠ করলে  প্রথমবার পাঠের সময়  আউযুবিল্লাহ পড়তে হবে।  আর প্রতিটি  সূরা পাঠের শুরুতে  বিসমিল্লাহ পড়তে হবে। </p>
                             </div>
                         </div>
                     </div>
-                    <h5 id="dua-title" class="font-normal text-[20px] text-secondary"></h5>
-                    <p class="mirza-regular text-[28px] text-black font-normal text-right" id="dua-text"></p>
+                    <div id="dua-area" disabled>
+                        <h5 id="dua-title" class="font-bold text-lg text-primary bg-slate-100 p-2 text-center rounded-lg"></h5>
+                        <p class="mirza-regular text-[28px] text-black font-normal text-right" id="dua-text"></p>
+                    </div>
+                    <div id="masaallah-area" class="hidden">
+                        <div class="md:flex justify-center items-center">
+                            <div>
+                                <img class="w-40" src="img/wellcome-imam.png" alt="wellcome-imam">
+                            </div>
+                            <div class="md:px-10 flex-1">
+                                <h1 class="font-bold text-lg text-primary mb-3">مَا شَاءَ ٱللّٰهْ আপনি সকাল -সন্ধ্যার দুআ ও জিকির সম্পূর্ণ করেছেন।</h1>
+                                <p class="leading-[25px]">সহীহ মুসলিমে বর্ণিত, রাসূলুল্লাহ ﷺ বলেছেন , মুফাররিদগণ  অগ্রগামী হয়ে গেছেন। মুফাররিদ করা ? জানতে চাওয়া হলে জবাবে তিনি বলেছেন, যেসব নারী ও পুরুষ অধিক পরিমানে আল্লাহর জিকির করেন। </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
               
         </section>
-        <img id="masaallah-img" class="w-96 left-0 top-0 rotate-[40deg] absolute -ml-[544px]" src="img/masaallah.png" alt="">
+        <!-- <img id="masaallah-img" class="" src="img/masaallah.png" alt=""> -->
     </main>
     <script src="js/main.js"></script>
 </body>
